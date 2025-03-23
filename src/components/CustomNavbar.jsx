@@ -60,7 +60,7 @@ export function CustomNavbar() {
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem className="hidden lg:flex">
-          <Link href="#">Login</Link>
+          <Link href="#">WIP.</Link>
         </NavbarItem>
         <NavbarItem>
       <ThemeSwitcher />

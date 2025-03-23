@@ -21,7 +21,7 @@ function App() {
       <div className="main-content">
         <header className="main-header">
           <img
-            src="/images/profile2.webp"
+            src="./images/profile2.webp"
             className="border-4 border-content4"
             alt="Foto de perfil Felipe Lobos"
           />
@@ -78,7 +78,7 @@ function App() {
         <section id="projects" className="projects flex flex-col gap-7">
           <h2>mis proyectos</h2>
           <ProjectCard
-            imageSrc={"../src/assets/img/typitaka.webp"}
+            imageSrc={"./src/assets/img/typitaka.webp"}
             projectName={"TipyTaka"}
             title={"Juego de mecanografia"}
             description={`Reto de escritura rapida en diferentes lenguajes al estilo de MonkeyTypes.`}
@@ -87,7 +87,7 @@ function App() {
             liveLink="https://felipe-lobos.github.io/typitaka/"
           />
           <ProjectCard
-            imageSrc={"../src/assets/img/meal-finder.webp"}
+            imageSrc={"./src/assets/img/meal-finder.webp"}
             projectName={"Meal Finder"}
             title={"Buscador de recetas"}
             description={`Proyecto a modo de estudio que utiliza la API de https://www.themealdb.com/ para buscar, filtrar y mostrar las recetas`}
@@ -96,7 +96,7 @@ function App() {
             githubLink="https://github.com/Felipe-Lobos/meal-finder-project"
           />
           <ProjectCard
-            imageSrc={"../src/assets/img/inmuebles.webp"}
+            imageSrc={"./src/assets/img/inmuebles.webp"}
             projectName={"Inmuebles"}
             title={"Web full-stack de arriendos"}
             description={`Proyecto full-stack sobre arriendo de inmuebles, con autenticacion, perfiles de usuario filtros de busqueda y solicitudes de arriendo`}
