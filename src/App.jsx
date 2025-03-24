@@ -19,7 +19,7 @@ function App() {
     <>
       <CustomNavbar />
       <div className="main-content">
-        <header className="main-header">
+        <header className="main-header my-5">
           <img
             src="./images/profile2.webp"
             className="border-4 border-content4"
@@ -53,7 +53,7 @@ function App() {
                 // className="data-[hover]:bg-foreground/10"
                 variant="ghost"
                 as={Link}
-                target="_blank"
+                
                 href={"https://www.linkedin.com/in/felipe-lobos-herrera/"}
               >
                 <IoLogoGithub className="" />
@@ -65,8 +65,9 @@ function App() {
                 // className="data-[hover]:bg-foreground/10"
                 variant="ghost"
                 as={Link}
-                target="_blank"
-                href={"https://www.linkedin.com/in/felipe-lobos-herrera/"}
+                // target="_blank"
+                href={"./CV_Felipe_Lobos_Herrera.pdf"}
+                download={true}
               >
                 <PiReadCvLogoFill className="" />
                 CV
@@ -78,7 +79,7 @@ function App() {
         <section id="projects" className="projects flex flex-col gap-7">
           <h2>mis proyectos</h2>
           <ProjectCard
-            imageSrc={"./src/assets/img/typitaka.webp"}
+            imageSrc={"./images/projects/typitaka.webp"}
             projectName={"TipyTaka"}
             title={"Juego de mecanografia"}
             description={`Reto de escritura rapida en diferentes lenguajes al estilo de MonkeyTypes.`}
@@ -87,7 +88,7 @@ function App() {
             liveLink="https://felipe-lobos.github.io/typitaka/"
           />
           <ProjectCard
-            imageSrc={"./src/assets/img/meal-finder.webp"}
+            imageSrc={"./images/projects/meal-finder.webp"}
             projectName={"Meal Finder"}
             title={"Buscador de recetas"}
             description={`Proyecto a modo de estudio que utiliza la API de https://www.themealdb.com/ para buscar, filtrar y mostrar las recetas`}
@@ -96,7 +97,7 @@ function App() {
             githubLink="https://github.com/Felipe-Lobos/meal-finder-project"
           />
           <ProjectCard
-            imageSrc={"./src/assets/img/inmuebles.webp"}
+            imageSrc={"./images/projects/inmuebles.webp"}
             projectName={"Inmuebles"}
             title={"Web full-stack de arriendos"}
             description={`Proyecto full-stack sobre arriendo de inmuebles, con autenticacion, perfiles de usuario filtros de busqueda y solicitudes de arriendo`}
