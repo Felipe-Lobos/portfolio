@@ -43,12 +43,12 @@ export function CustomNavbar() {
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Link color="foreground" href="#about-me">
             Sobre mi
           </Link>
         </NavbarItem>
         <NavbarItem >
-          <Link color="foreground"  href="#">
+          <Link color="foreground"  href="#projects">
             Proyectos
           </Link>
         </NavbarItem>
