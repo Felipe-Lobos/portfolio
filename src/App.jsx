@@ -1,19 +1,13 @@
-import { useEffect, useState } from "react";
-import { Button, ButtonGroup, Link } from "@heroui/react";
+
+import { Button, Link, Card, CardBody } from "@heroui/react";
 import "./App.css";
 import { CustomNavbar } from "./components/CustomNavbar";
-import { useThemeContext } from "./context/ThemeContext.jsx";
 import { ProjectCard } from "./components/ProjectCard.jsx";
-import { TiSocialLinkedin } from "react-icons/ti";
 import { FaLinkedin } from "react-icons/fa";
 import { IoLogoGithub } from "react-icons/io";
 import { PiReadCvLogoFill } from "react-icons/pi";
 
 function App() {
-  const { theme } = useThemeContext();
-  useEffect(() => {
-    console.log("El tema cambió a:", theme);
-  }, [theme]); // Se ejecuta cuando cambia el tema
   return (
     <>
       <CustomNavbar />
@@ -72,7 +66,7 @@ function App() {
         </header>
 
         <section id="projects" className="projects  mt-14 ">
-          <h2 className="text-3xl font-semibold">Mis proyectos</h2>
+          <h2 className="text-3xl font-semibold text-primary-500/90">Mis proyectos</h2>
           <div className="flex flex-col gap-7 mt-3">
             <ProjectCard
               imageSrc={"./images/projects/typitaka.webp"}
@@ -109,9 +103,44 @@ function App() {
           </div>
         </section>
         <section id="about-me" className="about-me mt-14 text-start">
-          <h2 className="text-3xl font-semibold">Sobre mi</h2>
-          <div className="flex flex-col">
-            <p>Work in progres</p>
+          <h2 className="text-3xl font-semibold text-primary-500/90 ">Sobre mí</h2>
+          <div className="flex flex-col gap-3 align-center mt-3">
+            <Card
+              isBlurred
+              className="border-none items-center dark:bg-gray-700/50 bg-secondary-400/20"
+              shadow="sm"
+            >
+              <CardBody className="max-w-[80ch] flex flex-col items-center gap-3  py-6">
+                <span className="self-start text-foreground/70">Volviendo a empezar</span>
+                <p>
+                  Hola, soy Felipe Lobos,{" "}
+                  <strong className="font-bold	 text-primary-700/80">
+                    técnico en informática y desarrollador full-stack.
+                  </strong>{" "}
+                  Si bien estuve estos últimos años desempeñándome en diversos
+                  rubros y enfocándome en otras áreas de la vida, hoy retomo a
+                  donde había quedado, a lo que me motiva.
+                </p>
+                <p>
+                  ¿Qué me gusta? Que las cosas funcionen como corresponde, es
+                  por eso{" "}
+                  <strong className="font-bold	 text-primary-700/80">
+                    siempre pongo especial atención en cada detalle,
+                  </strong>{" "}
+                  creando soluciones de calidad, productos que yo usaría.
+                </p>
+                <p>
+                  ¿Mis puntos fuertes?{" "}
+                  <strong className="font-bold	 text-primary-700/80">
+                    La lógica y el pensamiento analítico son cualidades que
+                    siempre destaco.
+                  </strong>{" "}
+                  Estas habilidades son esenciales en mi día a día para resolver
+                  problemas y tomar decisiones, y disfruto aplicarlas en la
+                  programación.
+                </p>
+              </CardBody>
+            </Card>
           </div>
         </section>
 

@@ -1,41 +1,30 @@
 import {
-  Navbar,
-  NavbarBrand,
-  NavbarContent,
-  NavbarItem,
+  Navbar, 
+  NavbarBrand, 
+  NavbarContent, 
+  NavbarItem, 
   Link,
-  NavbarMenu,
-  NavbarMenuToggle,
-  NavbarMenuItem,
+  Button
+} from "@heroui/react";
+import {
+  Dropdown,
+  DropdownTrigger,
+  DropdownMenu,
+  DropdownItem
 } from "@heroui/react";
 import { ThemeSwitcher } from "./heroUI/ThemeSwitcher";
-import { useState } from "react";
 
 export function CustomNavbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const menuItems = [
-    "Profile",
-    "Dashboard",
-    "Activity",
-  ];
-
   return (
     <Navbar 
-    className="w-full"
+      className="w-full"
       classNames={{
-        base: "bg-transparent/50", // Hace el fondo transparente
-        menu: "bg-background/90", // También puedes hacer transparente el wrapper
+        base: "bg-transparent/50",
       }}
       shouldHideOnScroll
       isBlurred={false}
-      onMenuOpenChange={setIsMenuOpen}
     >
       <NavbarContent>
-        <NavbarMenuToggle
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="sm:hidden"
-        />
         <NavbarBrand>
           <p className="text-inherit">Felipe Lobos</p>
         </NavbarBrand>
@@ -47,45 +36,46 @@ export function CustomNavbar() {
             Sobre mi
           </Link>
         </NavbarItem>
-        <NavbarItem >
-          <Link color="foreground"  href="#projects">
+        <NavbarItem>
+          <Link color="foreground" href="#projects">
             Proyectos
           </Link>
         </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="#">
-            Estudios
-          </Link>
-        </NavbarItem>
       </NavbarContent>
+      
       <NavbarContent justify="end">
-        <NavbarItem className="hidden lg:flex">
-          <Link href="#">WIP.</Link>
+        {/* Dropdown para móvil */}
+        <NavbarItem className="flex sm:hidden">
+          <Dropdown>
+            <DropdownTrigger>
+              <Button 
+                variant="light" 
+                isIconOnly
+              >
+                ☰
+              </Button>
+            </DropdownTrigger>
+            <DropdownMenu aria-label="Opciones de navegación">
+              <DropdownItem key="about-me"
+              textValue="Sobre mí">
+                <Link className="w-full" href="#about-me">
+                  Sobre mí
+                </Link>
+              </DropdownItem>
+              <DropdownItem key="projects"
+              textValue="Proyectos">
+                <Link className="w-full" href="#projects">
+                  Proyectos
+                </Link>
+              </DropdownItem>
+            </DropdownMenu>
+          </Dropdown>
         </NavbarItem>
+        
         <NavbarItem>
-      <ThemeSwitcher />
+          <ThemeSwitcher />
         </NavbarItem>
       </NavbarContent>
-      <NavbarMenu>
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
-            <Link
-              className="w-full"
-              color={
-                index === 2
-                  ? "primary"
-                  : index === menuItems.length - 1
-                  ? "danger"
-                  : "foreground"
-              }
-              href="#"
-              size="lg"
-            >
-              {item}
-            </Link>
-          </NavbarMenuItem>
-        ))}
-      </NavbarMenu>
     </Navbar>
   );
 }
