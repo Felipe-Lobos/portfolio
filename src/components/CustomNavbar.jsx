@@ -19,7 +19,8 @@ export function CustomNavbar() {
     <Navbar 
       className="w-full"
       classNames={{
-        base: "bg-transparent/50",
+        base: "bg-secondary-400/70  dark:bg-transparent/50 ",
+        
       }}
       shouldHideOnScroll
       isBlurred={false}
@@ -39,6 +40,11 @@ export function CustomNavbar() {
         <NavbarItem>
           <Link color="foreground" href="#projects">
             Proyectos
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link color="foreground" href="#contact">
+            Contacto
           </Link>
         </NavbarItem>
       </NavbarContent>
@@ -66,6 +72,12 @@ export function CustomNavbar() {
               textValue="Proyectos">
                 <Link className="w-full" href="#projects">
                   Proyectos
+                </Link>
+              </DropdownItem>
+              <DropdownItem key="contact"
+              textValue="Contacto">
+                <Link className="w-full" href="#contact">
+                Contacto
                 </Link>
               </DropdownItem>
             </DropdownMenu>

@@ -1,11 +1,11 @@
-import { Button, Link} from "@heroui/react";
+import { Button, Link, Input } from "@heroui/react";
 import "./App.css";
 import { CustomNavbar } from "./components/CustomNavbar";
 import { ProjectCard } from "./components/ProjectCard.jsx";
 import { FaLinkedin } from "react-icons/fa";
 import { IoLogoGithub } from "react-icons/io";
 import { PiReadCvLogoFill } from "react-icons/pi";
-
+import { MailToCopy } from "./components/MailToCopy.jsx";
 function App() {
   return (
     <>
@@ -22,10 +22,13 @@ function App() {
               Felipe Lobos Herrera
             </h1>
             <h3 className="text-2xl ">Desarrollador Full Stack</h3>
-            <p className="mb-3 text-foreground/70">En constante aprendizaje y descubrimiento.</p>
+            <p className="mb-3 text-foreground/70">
+              En constante aprendizaje y descubrimiento.
+            </p>
+
             <div className="header-links flex gap-3 flex-wrap ">
               <Button
-                radius="full"
+                radius="lg"
                 className="text-xl p-5"
                 // className="data-[hover]:bg-foreground/10"
                 variant="ghost"
@@ -37,7 +40,7 @@ function App() {
                 Linkedin
               </Button>
               <Button
-                radius="full"
+                radius="lg"
                 className=" text-xl p-5"
                 // className="data-[hover]:bg-foreground/10"
                 variant="ghost"
@@ -48,7 +51,7 @@ function App() {
                 Github
               </Button>
               <Button
-                radius="full"
+                radius="lg"
                 className=" text-xl p-5"
                 // className="data-[hover]:bg-foreground/10"
                 variant="ghost"
@@ -143,8 +146,17 @@ function App() {
             </div>
           </div>
         </section>
+        <section id="contact" className="w-full mt-14">
+          <h2 className="text-3xl font-semibold text-primary-500/90 ">
+            Contacto
+          </h2>
+          <article >
 
-        <footer className="flex justify-end w-full mt-6">
+          <MailToCopy />
+          </article>
+        </section>
+
+        <footer className="flex justify-end w-full mt-14">
           <Link href="#inicio">Volver al inicio</Link>
         </footer>
       </div>
