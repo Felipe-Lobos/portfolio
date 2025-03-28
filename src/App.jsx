@@ -10,8 +10,8 @@ function App() {
   return (
     <>
       <CustomNavbar />
-      <div className="main-content text-start">
-        <header id="inicio" className="main-header mt-5">
+      <div  id="inicio" className="main-content text-start">
+        <header  className="main-header mt-5">
           <img
             src="./images/profile2.webp"
             className="border-4 border-content4"
@@ -30,6 +30,7 @@ function App() {
               <Button
                 radius="lg"
                 className="text-xl p-5"
+                
                 // className="data-[hover]:bg-foreground/10"
                 variant="ghost"
                 as={Link}
@@ -147,7 +148,7 @@ function App() {
           </div>
         </section>
         <section id="contact" className="w-full mt-14">
-          <h2 className="text-3xl font-semibold text-primary-500/90 ">
+          <h2 className="text-3xl font-semibold text-primary-500/90 mb-3">
             Contacto
           </h2>
           <article >
@@ -157,7 +158,7 @@ function App() {
         </section>
 
         <footer className="flex justify-end w-full mt-14">
-          <Link href="#inicio">Volver al inicio</Link>
+          <Link  href="#inicio">Volver al inicio</Link>
         </footer>
       </div>
     </>

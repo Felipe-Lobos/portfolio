@@ -16,7 +16,7 @@ export function ProjectCard({
   return (
     <Card
       isBlurred
-      className="border-none dark:bg-gray-700/50 bg-secondary-400/20"
+      className="border-none dark:bg-primary-100/10 bg-secondary-400/20"
       shadow="sm"
     >
       <CardBody>
