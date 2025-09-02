@@ -1,10 +1,10 @@
-import { Button, Link, Input } from "@heroui/react";
+import { Button, Link } from "@heroui/react";
 import "./App.css";
 import { CustomNavbar } from "./components/CustomNavbar";
 import { ProjectCard } from "./components/ProjectCard.jsx";
 import { FaLinkedin } from "react-icons/fa";
 import { IoLogoGithub } from "react-icons/io";
-import { PiReadCvLogoFill } from "react-icons/pi";
+//import { PiReadCvLogoFill } from "react-icons/pi";
 import { MailToCopy } from "./components/MailToCopy.jsx";
 function App() {
   return (
@@ -51,7 +51,9 @@ function App() {
                 <IoLogoGithub className="" />
                 Github
               </Button>
-              <Button
+              
+              {/*  TODO: Revisar el cv */}
+              {/* <Button
                 radius="lg"
                 className=" text-xl p-5"
                 // className="data-[hover]:bg-foreground/10"
@@ -63,7 +65,8 @@ function App() {
               >
                 <PiReadCvLogoFill className="" />
                 CV
-              </Button>
+              </Button> */}
+
             </div>
           </article>
         </header>
